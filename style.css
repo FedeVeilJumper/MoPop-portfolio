@@ -36,11 +36,10 @@ html, body {
     border-right: 1px solid #1a1a1a;
 }
 
-/* Split Column Layout based on your sketch */
 .panel-grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 6rem;
+    grid-template-columns: 1.1fr 0.8fr;
+    gap: 5rem;
     width: 100%;
     align-items: center;
 }
@@ -67,44 +66,57 @@ html, body {
     font-size: 1.1rem;
     line-height: 1.7;
     opacity: 0.8;
-    max-width: 520px;
+    max-width: 500px;
 }
 
-/* Thick Artifact Box (The Vitrine) */
+/* Vertical Boxy Artifact Vitrine */
 .artifact-box {
     border: 2px solid #333333;
     background: #111111;
-    padding: 2.5rem;
+    padding: 2rem;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 320px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+    border-top: 4px solid #ff5500; /* THE SHARP ACCENT COLOR */
 }
 
 .artifact-visual {
-    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    opacity: 0.5;
-    margin-bottom: 2rem;
+    color: #ff5500; /* Accent highlight */
+    margin-bottom: 1.25rem;
     border-bottom: 1px solid #222;
     padding-bottom: 0.75rem;
 }
 
+.blueprint-preview {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: 1px solid #222;
+    margin-bottom: 1.25rem;
+    filter: grayscale(30%) contrast(110%);
+}
+
 .relic-display {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-style: italic;
-    letter-spacing: -0.01em;
-    margin-bottom: 2.5rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
     color: #fff;
 }
 
 .tip-text {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     line-height: 1.5;
-    opacity: 0.65;
-    border-left: 2px solid #555;
-    padding-left: 1rem;
+    opacity: 0.6;
+    border-left: 2px solid #ff5500;
+    padding-left: 0.75rem;
 }
