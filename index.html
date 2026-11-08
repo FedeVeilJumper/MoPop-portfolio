@@ -37,14 +37,26 @@
         </section>
     </main>
     <script>
+    let isScrolling = false;
     window.addEventListener('wheel', (evt) => {
         const container = document.querySelector('.horizontal-container');
-        if (container && evt.deltaY !== 0) {
+        if (!container || isScrolling) return;
+
+        if (evt.deltaY !== 0) {
             evt.preventDefault();
+            isScrolling = true;
+            
+            // Scroll by one panel width in the direction of the wheel
+            const direction = evt.deltaY > 0 ? 1 : -1;
             container.scrollBy({
-                left: evt.deltaY * 2,
+                left: direction * window.innerWidth,
                 behavior: 'smooth'
             });
+
+            // Debounce to prevent multi-panel jumping on fast scroll wheels
+            setTimeout(() => {
+                isScrolling = false;
+            }, 600);
         }
     }, { passive: false });
     </script>
