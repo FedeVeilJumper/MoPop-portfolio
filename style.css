@@ -15,7 +15,7 @@ html, body {
     height: 100vh;
     overflow-x: auto;
     overflow-y: hidden;
-    /* scroll-snap-type: x mandatory; */ /* Disabled for pure JS wheel gliding */
+    scroll-snap-type: x mandatory; /* RESTORED: Locks scroll to snap points */
     scrollbar-width: none;
 }
 
@@ -27,6 +27,8 @@ html, body {
     flex: 0 0 100vw;
     width: 100vw;
     height: 100vh;
+    scroll-snap-align: start; /* RESTORED: Snaps panel to viewport edge */
+    scroll-snap-stop: always;
     display: flex;
     flex-direction: column;
     justify-content: center;
