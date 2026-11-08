@@ -2,8 +2,8 @@
 html, body {
     width: 100vw;
     height: 100vh;
-    background: #0b0b0b;
-    color: #f0f0f0;
+    background: #0a0a0a;
+    color: #ececec;
     font-family: monospace;
     overflow: hidden;
 }
@@ -30,46 +30,81 @@ html, body {
     scroll-snap-align: start;
     scroll-snap-stop: always;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 4rem 12vw;
-    border-right: 1px solid #1a1a1a;
+    align-items: center;
+    padding: 0 8vw;
     position: relative;
-    transition: background 0.5s ease;
+    border-right: 1px solid #1a1a1a;
 }
 
-/* Subtle individual panel nuances (spatial framing) */
-.panel-1 { border-left: 3px solid #333; }
-.panel-2 { border-left: 3px solid #3a3830; }
-.panel-3 { border-left: 3px solid #303838; }
-.panel-4 { border-left: 3px solid #38303a; }
-.panel-5 { border-left: 3px solid #383530; }
-.panel-6 { border-left: 3px solid #423b32; background: #0d0c0b; /* Slightly warmer undertone for the Fibonacci culture panel */ }
-.panel-7 { border-left: 3px solid #ffffff; background: #0f0f0f; }
+/* Split Column Layout based on your sketch */
+.panel-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 6rem;
+    width: 100%;
+    align-items: center;
+}
 
 .panel-index {
     position: absolute;
     top: 4rem;
-    left: 12vw;
-    font-size: 0.85rem;
-    letter-spacing: 0.2em;
+    left: 8vw;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
     opacity: 0.4;
     text-transform: uppercase;
 }
 
-h1 { font-size: 2.8rem; margin-bottom: 1.2rem; font-weight: 400; letter-spacing: -0.03em; }
-p { font-size: 1.15rem; line-height: 1.7; opacity: 0.85; max-width: 640px; }
-
-.cta-btn {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 0.8rem 1.8rem;
-    background: #f0f0f0;
-    color: #0b0b0b;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    transition: opacity 0.2s ease;
+.content-column h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
 }
-.cta-btn:hover { opacity: 0.8; }
+
+.content-column p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0.8;
+    max-width: 520px;
+}
+
+/* Thick Artifact Box (The Vitrine) */
+.artifact-box {
+    border: 2px solid #333333;
+    background: #111111;
+    padding: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.artifact-visual {
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #222;
+    padding-bottom: 0.75rem;
+}
+
+.relic-display {
+    font-size: 1.25rem;
+    font-style: italic;
+    letter-spacing: -0.01em;
+    margin-bottom: 2.5rem;
+    color: #fff;
+}
+
+.tip-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    opacity: 0.65;
+    border-left: 2px solid #555;
+    padding-left: 1rem;
+}
