@@ -5,7 +5,7 @@ html, body {
     background: #0b0b0b;
     color: #f0f0f0;
     font-family: monospace;
-    overflow: hidden; /* Keeps the page locked to a single screen */
+    overflow: hidden;
 }
 
 .horizontal-container {
@@ -13,23 +13,20 @@ html, body {
     flex-direction: row;
     width: 100vw;
     height: 100vh;
-    overflow-x: scroll; /* Enables horizontal scrolling natively */
+    overflow-x: auto;
     overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Firefox */
-    -webkit-overflow-scrolling: touch; /* Smooth trackpad/mobile momentum */
+    /* scroll-snap-type: x mandatory; */ /* Disabled for pure JS wheel gliding */
+    scrollbar-width: none;
 }
 
 .horizontal-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
 }
 
 .panel {
     flex: 0 0 100vw;
     width: 100vw;
     height: 100vh;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
     display: flex;
     flex-direction: column;
     justify-content: center;
