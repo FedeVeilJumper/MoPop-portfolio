@@ -16,13 +16,16 @@
         <section class="panel"><h1>07. Horizon</h1><p>Let's build forward together.</p></section>
     </main>
     <script>
-const container = document.querySelector('.horizontal-container');
-container.addEventListener('wheel', (evt) => {
-    if (evt.deltaY !== 0) {
-        evt.preventDefault();
-        container.scrollLeft += evt.deltaY;
-    }
-}, { passive: false });
-</script>
+    window.addEventListener('wheel', (evt) => {
+        const container = document.querySelector('.horizontal-container');
+        if (container && evt.deltaY !== 0) {
+            evt.preventDefault();
+            container.scrollBy({
+                left: evt.deltaY * 2,
+                behavior: 'smooth'
+            });
+        }
+    }, { passive: false });
+    </script>
 </body>
 </html>
