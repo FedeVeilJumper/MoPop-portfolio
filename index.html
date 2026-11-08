@@ -6,49 +6,58 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="horizontal-container">
+    <main class="horizontal-container">
         <!-- Panel 1 -->
-        <section class="panel">
-            <h1>01. Origin</h1>
+        <section class="panel panel-1">
+            <span class="panel-index">01 / 07 — Origin</span>
+            <h1>Spatial Foundations</h1>
             <p>From international commercial design and broadcast media across Istanbul and Dubai to physical-digital spatial layouts. Culture is a physical environment before it is a digital one—shaping how human stories inhabit space.</p>
         </section>
 
         <!-- Panel 2 -->
-        <section class="panel">
-            <h1>02. R&D</h1>
+        <section class="panel panel-2">
+            <span class="panel-index">02 / 07 — R&D</span>
+            <h1>Systems & Prototyping</h1>
             <p>Exploring the frontier of immersive technology and human motion libraries with Google Daydream[cite: 3]. Building fast, physical test environments and iterative feedback loops to validate abstract virtual concepts in real-world human behavior.</p>
         </section>
 
         <!-- Panel 3 -->
-        <section class="panel">
-            <h1>03. Craft</h1>
+        <section class="panel panel-3">
+            <span class="panel-index">03 / 07 — Craft</span>
+            <h1>Public Discourse</h1>
             <p>Designing and facilitating experiential curricula at NexaLand[cite: 3]. Mentoring over 300 emerging designers and bringing the soul of curiosity into homes through project-based learning during times of rapid global isolation.</p>
         </section>
 
         <!-- Panel 4 -->
-        <section class="panel">
-            <h1>04. Ventures</h1>
+        <section class="panel panel-4">
+            <span class="panel-index">04 / 07 — Ventures</span>
+            <h1>The Game of Systems</h1>
             <p>Co-founding Gerdoo Games[cite: 3]—a multi-platform venture connecting mobile deduction gameplay to television displays. Directing multidisciplinary teams[cite: 3] through studio operations, budgeting, and a successful acquisition.</p>
         </section>
 
         <!-- Panel 5 -->
-        <section class="panel">
-            <h1>05. Enterprise</h1>
+        <section class="panel panel-5">
+            <span class="panel-index">05 / 07 — Enterprise</span>
+            <h1>Enterprise Architecture</h1>
             <p>Operating as Lead Digital Experience Designer at Starbucks Technology[cite: 3]. Bridging the operational gap between C-suite leadership, finance, store operations, and emerging XR/AI tech to scale human connection within massive systems[cite: 3].</p>
         </section>
 
         <!-- Panel 6 -->
-        <section class="panel">
-            <h1>06. Culture</h1>
+        <section class="panel panel-6">
+            <span class="panel-index">06 / 07 — Culture</span>
+            <h1>The Fibonacci Spiral</h1>
             <p>Pop culture as civilization's ultimate repository—a Fibonacci-like spiral of creative evolution[cite: 2]. Framing marketing and creative studios not as mere revenue engines, but as cultural packaging, stewardship, and human dialogue[cite: 2].</p>
         </section>
 
         <!-- Panel 7 -->
-        <section class="panel">
-            <h1>07. Horizon</h1>
-            <p>An unshakeable curiosity and a humble "build-forward" commitment[cite: 2]. Let's sit down, look at the horizon, and shape MoPOP's next creative footprint together[cite: 2].<br><br><strong>erfan.dastournejad@gmail.com | (425) 414-4249</strong></p>
+        <section class="panel panel-7">
+            <span class="panel-index">07 / 07 — Horizon</span>
+            <h1>Let's Build Forward</h1>
+            <p>An unshakeable curiosity and a humble "build-forward" commitment[cite: 2]. Let's sit down, look at the horizon, and shape MoPOP's next creative footprint together[cite: 2].</p>
+            <a href="mailto:erfan.dastournejad@gmail.com" class="cta-btn">Initialize Dialogue →</a>
         </section>
     </main>
+
     <script>
     let isScrolling = false;
     window.addEventListener('wheel', (evt) => {
@@ -59,14 +68,12 @@
             evt.preventDefault();
             isScrolling = true;
             
-            // Scroll by one panel width in the direction of the wheel
             const direction = evt.deltaY > 0 ? 1 : -1;
             container.scrollBy({
                 left: direction * window.innerWidth,
                 behavior: 'smooth'
             });
 
-            // Debounce to prevent multi-panel jumping on fast scroll wheels
             setTimeout(() => {
                 isScrolling = false;
             }, 600);
