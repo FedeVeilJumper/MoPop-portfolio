@@ -15,5 +15,14 @@
         <section class="panel"><h1>06. Culture</h1><p>The Fibonacci cultural spiral...</p></section>
         <section class="panel"><h1>07. Horizon</h1><p>Let's build forward together.</p></section>
     </main>
+    <script>
+const container = document.querySelector('.horizontal-container');
+container.addEventListener('wheel', (evt) => {
+    if (evt.deltaY !== 0) {
+        evt.preventDefault();
+        container.scrollLeft += evt.deltaY;
+    }
+}, { passive: false });
+</script>
 </body>
 </html>
